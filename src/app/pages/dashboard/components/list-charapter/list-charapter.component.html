@@ -1,0 +1,48 @@
+<div class="d_flex">
+    <div>
+        <div>Nombre</div>
+        <mat-form-field appearance="fill" class="my-form-field">
+            <input matInput type="text" placeholder="Nombre" [(ngModel)]="name" (ngModelChange)="clearInput($event)">
+        </mat-form-field>
+    </div>
+    <div>
+        <div>Tipo</div>
+        <mat-form-field appearance="fill" class="my-form-field">
+            <input matInput type="text" placeholder="Tipo" [(ngModel)]="type" (ngModelChange)="clearInput($event)">
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="d_flex">
+    <button mat-raised-button class="button_css" style="margin-right: 2rem;" (click)="clearData()">
+        Limpiar Filtros
+    </button>
+    <button mat-raised-button class="button_css" color="primary" (click)="getDataList()">
+        Buscar
+    </button>
+</div>
+
+
+
+<div>
+    <table mat-table [dataSource]="listSelected" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="Nombre">
+            <th mat-header-cell class="headerColor" *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="Especie">
+            <th mat-header-cell class="headerColor" *matHeaderCellDef> Especie </th>
+            <td mat-cell *matCellDef="let element"> {{element.species}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Tipo">
+            <th mat-header-cell class="headerColor" *matHeaderCellDef> Tipo </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+        <tr mat-header-row [style.background-color]="color" *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+<mat-paginator style="box-shadow: 2px black;" [hidePageSize]="true" [showFirstLastButtons]="true" [length]="cantidad" [pageSize]="pageSize" (page)="changePage($event)">
+</mat-paginator>

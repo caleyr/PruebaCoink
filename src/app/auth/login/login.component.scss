@@ -1,0 +1,103 @@
+.img-body {
+    height: 35%;
+    width: 100%;
+}
+
+.info_login {
+    padding: 15%;
+    width: 35rem;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+
+    .text_info {
+        margin-top: 25%;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #C4F6DC;
+    }
+
+    .text_info_two {
+        margin-top: 7%;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #C4F6DC;
+    }
+
+    .logo_css {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.login-container {
+    width: 35rem;
+    height: 100%;
+    padding: 15%;
+    margin-top: 10%;
+
+    h4 {
+        text-align: end;
+        margin-bottom: 15rem;
+    }
+}
+
+form {
+    text-align: left;
+    width: 100%;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #004B40;
+    font-weight: 700;
+}
+
+.input {
+    margin-bottom: 1rem;
+
+    mat-form-field {
+        width: 100%;
+    }
+}
+
+.text_input {
+    margin-bottom: .5rem;
+}
+
+.input-mat {
+    width: 80%;
+}
+
+mat-checkbox {
+    span {
+        font-weight: 500;
+        color: #004B40;
+    }
+}
+
+button {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: 314px;
+    font-size: large;
+    border-radius: 30px;
+}
+
+@media (max-width: 700px) {
+    form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #004B40;
+        font-weight: 700;
+    }
+
+    h4 {
+        text-align: end;
+        margin-bottom: 15rem;
+        font-size: 12px
+    }
+}

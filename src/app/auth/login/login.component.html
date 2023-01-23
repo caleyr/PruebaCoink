@@ -1,0 +1,47 @@
+<body>   
+    <mat-grid-list [cols]="!(isHandset$ | async) ? 2 : 1" rowHeight="100%">
+        <mat-grid-tile *ngIf="!(isHandset$ | async)" style="background-color: #001B24;">
+            <div class="info_login">
+                <div class="text_info">¡Bienvenido a la herramienta de registro Coink!</div>
+                <img class="logo_css" src="assets/image/logo_login.jpg">
+                <div class="text_info_two">Coink para tu día a día. Empieza ahorrando y cumple tus sueños con propósito.
+                </div>
+                <img class="logo_css" src="assets/image/logo_login2.jpg">
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="login-container">
+                <h4>¿Aún no tienes una cuenta? <span class="text_page">Regístrate ahora</span></h4>
+                <form>
+                    <h2>Iniciar sesión en Coink</h2>
+                    <div class="input">
+                        <div class="text_input">Correo electrónico</div>
+                        <mat-form-field class="input-mat" appearance="outline">
+                            <input type="email" matInput placeholder="Correo">
+                            <button matSuffix mat-icon-button aria-label="Clear">
+                                <mat-icon>account_circle</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div class="input" style="margin-bottom: 0;">
+                        <div class="text_input">Contraseña</div>
+                        <mat-form-field class="input-mat" appearance="outline">
+                            <input type="password" matInput placeholder="Contraseña">
+                            <button matSuffix mat-icon-button aria-label="Clear">
+                                <mat-icon>remove_red_eye</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <mat-checkbox>
+                        <span>Recordarme</span>
+                    </mat-checkbox>
+                    <div style="text-align: center;">
+                        <button style="margin-top: 3rem;" mat-raised-button type="button" routerLink="/app/dashboard" color="primary">Iniciar
+                            sesión</button>
+                        <h5>¿Olvidaste tu contraseña?</h5>
+                    </div>
+                </form>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</body>

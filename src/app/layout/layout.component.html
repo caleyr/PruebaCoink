@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <div class="header_menu">
+      <mat-toolbar>
+        <img class="logo_css" src="assets/image/logo.png">
+      </mat-toolbar>
+    </div>
+    <div class="profile_css">
+      <span class="dot"></span>
+    </div>
+    <div class="text_profile_css">
+      <mat-icon class="iconProfile" aria-hidden="false" fontIcon="https">
+      </mat-icon>
+      <span class="text_search">Jeff</span>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="dashboard" routerLinkActive="active-list-item">
+        <span>Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="dashboardOne" routerLinkActive="active-list-item">
+        <span>Ruta Uno</span>
+      </a>
+      <a mat-list-item routerLink="dashboardTwo" routerLinkActive="active-list-item">
+        <span>Ruta Dos</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="flexExpand"></span>
+      <h3>Coink</h3>
+      <span class="flexExpand"></span>
+      <button mat-icon-button class="example-icon account-circle" aria-label="Icono del Perfil" routerLink="/">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

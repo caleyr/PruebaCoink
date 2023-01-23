@@ -1,0 +1,71 @@
+.grid-container {
+  margin: 3rem 3rem;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+mat-icon {
+  width: auto;
+  font-size: 25px;
+  margin-right: .5rem;
+}
+
+.table-css {
+  height: 40vh;
+  overflow: auto;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #00493f;
+}
+
+h4 {
+  font-weight: 900;
+  padding-bottom: 1.5rem;
+}
+
+.text_page {
+  color: #00493f;
+}
+
+mat-icon {
+  vertical-align: top;
+  font-size: 1.5em;
+}
+
+.search_css {
+  padding-bottom: 2rem;
+}
+
+.text_search {
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 700px) {
+  .grid-container {
+    margin: 10px 10px;
+  }
+}
